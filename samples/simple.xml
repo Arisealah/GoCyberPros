@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person>
+    <name>Alice</name>
+    <age>30</age>
+    <city>New York</city>
+    <skills>
+        <skill>Python</skill>
+        <skill>Data Analysis</skill>
+    </skills>
+</person>

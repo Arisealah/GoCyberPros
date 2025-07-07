@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Your SaaS Name</title>
+    <link rel="stylesheet" href="mmain.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SOFTAJ Logo">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="product.html" class="nav-link active">Products</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+                    <i class="fas fa-moon light-mode-icon"></i>
+                    <i class="fas fa-sun dark-mode-icon"></i>
+                </button>
+                <button id="settings-toggle" class="settings-toggle" aria-label="Open settings panel">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <a href="products.html" class="btn btn-primary header-cta">Try Free Demo</a>
+                <button class="menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <button class="close-menu" aria-label="Close mobile menu">&times;</button>
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="products.html" class="mobile-nav-link active">Products</a></li>
+                <!-- Change this -->
+                <a href="products.html" class="btn btn-primary header-cta">Try Free Demo</a>
+
+<!-- To this -->
+                <a href="product.html" class="btn btn-primary header-cta">Try Free Demo</a>
+
+
+
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <a href="products.html" class="btn btn-primary mobile-cta">Try Free Demo</a>
+        </nav>
+    </div>
+
+    <div class="settings-modal" id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-modal-title" aria-hidden="true">
+        <div class="settings-modal-content">
+            <h2 id="settings-modal-title">Website Settings</h2>
+            <button class="close-settings-modal" aria-label="Close settings" id="close-settings-modal">&times;</button>
+            <div class="setting-group">
+                <h3>Text Size</h3>
+                <div class="font-size-controls">
+                    <button class="btn btn-outline font-size-btn" data-size="small">A- Small</button>
+                    <button class="btn btn-primary font-size-btn" data-size="default">A Default</button>
+                    <button class="btn btn-outline font-size-btn" data-size="large">A+ Large</button>
+                </div>
+            </div>
+            <div class="setting-group">
+                <h3>Contrast Mode</h3>
+                <div class="contrast-toggle">
+                    <label for="high-contrast-toggle" class="switch">
+                        <input type="checkbox" id="high-contrast-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>High Contrast</span>
+                </div>
+            </div>
+            <div class="setting-group">
+                <h3>(Optional) Language</h3>
+                <select id="language-select" class="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="products-hero-section">
+            <div class="container products-hero-content">
+                <div class="products-hero-text">
+                    <h1>Powerful Tools for Every Data Challenge</h1>
+                    <p class="lead-text">
+                        From intelligent metadata extraction to advanced threat analysis, our solutions provide the precision and insights you need to excel in a data-driven world.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="unified-extractor-demo" class="unified-extractor-demo-section">
+            <div class="container">
+                <h2 class="section-title">Try Our Unified Metadata Extractor</h2>
+                <p class="section-subtitle">Upload any supported file type below to see instant metadata extraction in action.</p>
+                <form id="unified-extractor-form" enctype="multipart/form-data">
+                    <input type="file" id="unified-file-input" name="file" accept=".txt,.docx,.csv,.eml,.jpg,.jpeg,.json,.mp3,.mp4,.pdf,.png,.pptx,.xlsx,.xml,.zip" required>
+                    <button type="submit" class="btn btn-primary btn-large">Extract Metadata</button>
+                </form>
+                <div id="unified-extractor-result" class="extractor-result" style="display:none;">
+                    <h3>Extraction Results:</h3>
+                    <pre><code id="unified-extracted-metadata" class="json-code"></code></pre>
+                    <div class="extractor-actions">
+                        <button id="copy-metadata-btn" class="btn btn-secondary">Copy</button>
+                        <button id="download-metadata-btn" class="btn btn-secondary">Download</button>
+                        <button id="clear-metadata-btn" class="btn btn-secondary">Choose Another File</button>
+                    </div>
+                </div>
+                <div id="unified-extractor-error" class="extractor-error" style="display:none;">
+                    <h3>Extraction Failed!</h3>
+                    <p id="unified-error-message"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="extractor-descriptions" class="extractor-descriptions-section">
+            <div class="container">
+                <h2 class="section-title">Supported Extractors & Features</h2>
+                <div class="extractor-list-grid">
+                    <!-- Repeat this block for each extractor -->
+                    <div class="extractor-card">
+                        <h3>TXT Extractor</h3>
+                        <p>Quickly parse plain text files to identify key entities, sentiments, and structured information.</p>
+                        <ul>
+                            <li>Supports .txt, .log, .csv (text-based)</li>
+                            <li>Extracts names, dates, locations, organizations</li>
+                            <li>Sentiment analysis for text blocks</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>DOCX Extractor</h3>
+                        <p>Advanced parsing for Microsoft Word documents to retrieve content, comments, and hidden properties.</p>
+                        <ul>
+                            <li>Extracts document properties (creator, company)</li>
+                            <li>Content and revision history extraction</li>
+                            <li>Supports .docx and .doc (via conversion)</li>
+                        </ul>
+                    </div>
+                    <!-- ...repeat for all extractors... -->
+                    <div class="extractor-card">
+                        <h3>CSV Extractor</h3>
+                        <p>Extracts structure, headers, and statistics from CSV files.</p>
+                        <ul>
+                            <li>Column and row analysis</li>
+                            <li>Header detection</li>
+                            <li>Data type inference</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>EML Extractor</h3>
+                        <p>Extracts metadata and content from email files.</p>
+                        <ul>
+                            <li>Sender, recipient, subject, date</li>
+                            <li>Attachment info</li>
+                            <li>Body and headers</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>JPG/PNG Extractor</h3>
+                        <p>Extracts image metadata, EXIF, and technical details.</p>
+                        <ul>
+                            <li>Dimensions, color mode</li>
+                            <li>EXIF and GPS data</li>
+                            <li>File info</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>JSON Extractor</h3>
+                        <p>Analyzes JSON structure and provides statistics.</p>
+                        <ul>
+                            <li>Key and value analysis</li>
+                            <li>Depth and type info</li>
+                            <li>File info</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>MP3/MP4 Extractor</h3>
+                        <p>Extracts audio/video metadata and technical details.</p>
+                        <ul>
+                            <li>Duration, bitrate, codec</li>
+                            <li>Tags and properties</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>PDF Extractor</h3>
+                        <p>Extracts metadata, text, and structure from PDF files.</p>
+                        <ul>
+                            <li>Author, creation date</li>
+                            <li>Page count, content summary</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>PPTX Extractor</h3>
+                        <p>Extracts metadata and slide info from PowerPoint files.</p>
+                        <ul>
+                            <li>Slide count, titles</li>
+                            <li>Author, creation date</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>XLSX Extractor</h3>
+                        <p>Extracts metadata and sheet info from Excel files.</p>
+                        <ul>
+                            <li>Sheet names, cell stats</li>
+                            <li>Author, creation date</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>XML Extractor</h3>
+                        <p>Analyzes XML structure and provides statistics.</p>
+                        <ul>
+                            <li>Element and attribute analysis</li>
+                            <li>Depth and structure</li>
+                        </ul>
+                    </div>
+                    <div class="extractor-card">
+                        <h3>ZIP Extractor</h3>
+                        <p>Extracts archive contents and compression info.</p>
+                        <ul>
+                            <li>File list and sizes</li>
+                            <li>Compression methods</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Revolutionize Your Data Workflow?</h2>
+                <p>From precision metadata extraction to advanced security analysis, we have the tools to transform your operations.</p>
+                <a href="contact.html" class="btn btn-large">Get Started with a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.png" alt="SOFTAJ Logo" class="light-logo">
+                    <img src="images/logo-dark.png" alt="SOFTAJ Logo" class="dark-logo">
+                </a>
+                <p class="tagline">Intelligent Metadata for Intelligent Decisions</p>
+                <p class="copyright">&copy; <span id="current-year"></span> SOFTAJ. All rights reserved.</p>
+            </div>
+            <nav class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="java.js" defer></script>
+    <script src="products.js" defer></script>
+</body>
+</html>

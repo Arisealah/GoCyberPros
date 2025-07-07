@@ -1,0 +1,15 @@
+
+
+From: Alice <alice@example.com>
+To: Bob <bob@example.com>
+Subject: Test Email
+Date: Tue, 25 Jun 2024 10:00:00 +0000
+Message-ID: <test123@example.com>
+Content-Type: text/plain; charset="utf-8"
+
+Hello Bob,
+
+This is a test email.
+
+Best,
+Alice

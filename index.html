@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your SaaS Name - Effortless Metadata Extraction</title>
+    <link rel="stylesheet" href="mmain.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SOFTAJ Logo">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="product.html" class="nav-link">Products</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+                    <i class="fas fa-moon light-mode-icon"></i>
+                    <i class="fas fa-sun dark-mode-icon"></i>
+                </button>
+
+                <button id="settings-toggle" class="settings-toggle" aria-label="Open settings panel">
+                    <i class="fas fa-cog"></i>
+                </button>
+
+                <a href="product.html" class="btn btn-primary header-cta">Try Free Demo</a>
+                <button class="menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <button class="close-menu" aria-label="Close mobile menu">&times;</button>
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="product.html" class="mobile-nav-link">Products</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <a href="product.html" class="btn btn-primary mobile-cta">Try Free Demo</a>
+        </nav>
+    </div>
+
+    <div class="settings-modal" id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-modal-title" aria-hidden="true">
+        <div class="settings-modal-content">
+            <h2 id="settings-modal-title">Website Settings</h2>
+            <button class="close-settings-modal" aria-label="Close settings" id="close-settings-modal">&times;</button>
+
+            <div class="setting-group">
+                <h3>Text Size</h3>
+                <div class="font-size-controls">
+                    <button class="btn btn-outline font-size-btn" data-size="small">A- Small</button>
+                    <button class="btn btn-primary font-size-btn" data-size="default">A Default</button>
+                    <button class="btn btn-outline font-size-btn" data-size="large">A+ Large</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Contrast Mode</h3>
+                <div class="contrast-toggle">
+                    <label for="high-contrast-toggle" class="switch">
+                        <input type="checkbox" id="high-contrast-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>High Contrast</span>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>(Optional) Language</h3>
+                <select id="language-select" class="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            
+            </div>
+    </div>
+
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Unlock Your Data's Full Potential</h1>
+                    <p class="lead-text">Effortlessly extract structured metadata from any document format, including TXT, PDF, DOCX, and more, with our intelligent AI-powered tools.</p>
+                    <div class="hero-ctas">
+                        <a href="product.html" class="btn btn-primary btn-large">Try Our Tools Free</a>
+                        <a href="#features" class="btn btn-secondary btn-large">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-illustration.svg" alt="Abstract illustration of data extraction and analysis">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-overview-section">
+            <div class="container">
+                <h2 class="section-title">Our Powerful Metadata Extraction Tools</h2>
+                <p class="section-subtitle">Discover how our specialized tools can streamline your data workflow.</p>
+
+                <div class="product-cards-grid">
+                    <div class="product-card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="card-title">TXT Extractor</h3>
+                        <p class="card-description">Extract key entities, sentiments, and structured data from plain text files with high accuracy.</p>
+                        <a href="product.html#txt-extractor" class="btn btn-outline">Try TXT Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3 class="card-title">PDF Extractor</h3>
+                        <p class="card-description">Seamlessly pull metadata, text, and even tables from complex PDF documents.</p>
+                        <a href="product.html#pdf-extractor" class="btn btn-outline">Try PDF Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="card-title">Image (OCR) Extractor</h3>
+                        <p class="card-description">Convert scanned documents and images into searchable, editable text and extract embedded metadata.</p>
+                        <a href="product.html#ocr-extractor" class="btn btn-outline">Try OCR Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 class="card-title">Document Analyzer</h3>
+                        <p class="card-description">Gain deep insights into document structure, relationships, and hidden metadata across various file types.</p>
+                        <a href="product.html#doc-analyzer" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="section-cta-bottom">
+                    <p>Ready to see how our tools can transform your data workflow?</p>
+                    <a href="product.html" class="btn btn-primary">Explore All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Our SaaS?</h2>
+                <p class="section-subtitle">Experience the future of data management with unparalleled efficiency and precision.</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                        <h3 class="benefit-title">Blazing Fast Extraction</h3>
+                        <p class="benefit-description">Leverage our optimized algorithms for rapid metadata extraction, saving you valuable time.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-flask"></i></div>
+                        <h3 class="benefit-title">AI-Powered Accuracy</h3>
+                        <p class="benefit-description">Our intelligent AI models ensure highly accurate and relevant metadata extraction from complex documents.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-cubes"></i></div>
+                        <h3 class="benefit-title">Seamless Integration</h3>
+                        <p class="benefit-description">Easily integrate our tools into your existing workflows with our robust and well-documented APIs.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="benefit-title">Enterprise-Grade Security</h3>
+                        <p class="benefit-description">Your data's security is our top priority, with advanced encryption and compliance measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Revolutionize Your Data Extraction?</h2>
+                <p>Join countless businesses that are already streamlining their operations. Try our powerful tools today!</p>
+                <a href="product.html" class="btn btn-primary btn-large">Get Started with a Free Demo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.png" alt="Your SaaS Name Logo" class="light-logo">
+                    <img src="images/logo-dark.png" alt="Your SaaS Name Logo" class="dark-logo">
+                </a>
+                <p class="tagline">Intelligent Metadata for Intelligent Decisions</p>
+                <p class="copyright">&copy; <span id="current-year"></span> Your SaaS Name. All rights reserved.</p>
+            </div>
+            <nav class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="java.js" defer></script>
+</body>
+</html>
