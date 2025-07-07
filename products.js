@@ -151,11 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData();
             formData.append('file', file);
 
-            try {
-                const response = await fetch('https://github.com/Arisealah/GoCyberPros/tree/master/backend/server.py', {
-                    method: 'POST',
-                    body: formData
-                });
+            // products.js - Updated fetch calls
+
+// Set your backend URL here (replace with your actual deployment URL)
+const API_BASE_URL = 'https://your-flask-backend.onrender.com';
+
+// Demo modal section
+const response = await fetch(`${API_BASE_URL}/api/extract`, {
+  method: 'POST',
+  body: formData
+});
+
+// Unified extractor section
+const response = await fetch(`${API_BASE_URL}/api/extract`, {
+  method: 'POST',
+  body: formData
+// });
+//             try {
+//                 const response = await fetch('https://github.com/Arisealah/GoCyberPros/tree/master/backend/server.py', {
+//                     method: 'POST',
+//                     body: formData
+//                 });
+                
 
                 if (!response.ok) {
                     let errorMsg = `HTTP error! status: ${response.status}`;
