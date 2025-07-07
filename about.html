@@ -5,21 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Your SaaS Name</title>
+    <title>About Us - Go Cyber Pros</title>
+    <!-- Link to your main CSS file -->
     <link rel="stylesheet" href="mmain.css">
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts - Inter and Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
+    <!-- Main Header Section -->
     <header class="main-header">
         <div class="container header-content">
+            <!-- Logo linking to home page -->
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="SOFTAJ Logo">
+                <img src="images/logo.png" alt="Go Cyber Pros Logo">
             </a>
+            <!-- Main Navigation -->
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
@@ -28,6 +35,7 @@
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Header Actions (Theme Toggle, Settings, CTA, Mobile Menu Toggle) -->
             <div class="header-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
                     <i class="fas fa-moon light-mode-icon"></i>
@@ -44,6 +52,7 @@
         </div>
     </header>
 
+    <!-- Mobile Navigation Overlay (hidden by default, shown via JavaScript) -->
     <div class="mobile-nav-overlay" id="mobile-nav-overlay">
         <button class="close-menu" aria-label="Close mobile menu">&times;</button>
         <nav class="mobile-nav">
@@ -57,6 +66,7 @@
         </nav>
     </div>
 
+    <!-- Settings Modal (hidden by default, shown via JavaScript) -->
     <div class="settings-modal" id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-modal-title" aria-hidden="true">
         <div class="settings-modal-content">
             <h2 id="settings-modal-title">Website Settings</h2>
@@ -90,102 +100,133 @@
         </div>
     </div>
 
-
+    <!-- Main Content Area -->
     <main>
+        <!-- About Hero Section - Introduction to Go Cyber Pros -->
         <section class="about-hero-section">
             <div class="container about-hero-content">
                 <div class="about-hero-text">
-                    <h1>Innovating the Future of Data Intelligence</h1>
-                    <p class="lead-text">At Your SaaS Name, we are driven by the belief that clear, actionable data is the foundation of success. Our mission is to empower businesses and individuals with cutting-edge tools for metadata extraction and advanced data analysis.</p>
+                    <h1>Revolutionizing B2B Cybersecurity with Advanced Data Intelligence</h1>
+                    <p class="lead-text">At Go Cyber Pros, we are a cutting-edge cybersecurity company dedicated to delivering advanced threat intelligence, in-depth analysis, and automated security operations through innovative technology. Our mission is to empower businesses to stay safe from evolving cyber threats.</p>
                 </div>
                 <div class="about-hero-image">
-                    <img src="images/about-hero-illustration.svg" alt="Illustration of gears and abstract data points, symbolizing innovation.">
+                    <!-- Placeholder image, ideally replace with a relevant illustration -->
+                    <img src="images/about-hero-illustration.svg" alt="Illustration of gears and abstract data points, symbolizing cybersecurity innovation.">
                 </div>
             </div>
         </section>
 
+        <!-- Our Core Offerings Section -->
         <section class="mission-vision-section">
             <div class="container">
-                <h2 class="section-title">Our Mission & Vision</h2>
+                <h2 class="section-title">Our Core Offerings</h2>
                 <div class="mission-vision-grid">
+                    <!-- Offering 1: Advanced Metadata Extraction -->
                     <div class="mission-card">
-                        <i class="fas fa-bullseye card-icon"></i>
-                        <h3>Our Mission</h3>
-                        <p>To provide intuitive, powerful, and secure software solutions that transform raw data into valuable insights, enabling our users to make informed decisions and enhance their operational efficiency.</p>
+                        <i class="fas fa-search card-icon"></i>
+                        <h3>Advanced Metadata Extraction Across All File Types</h3>
+                        <p>Go Cyber Pros possesses a proprietary suite of tools designed for deep, forensic-level metadata extraction from virtually every known file type. This extends far beyond basic file properties to include embedded author details, application-specific metadata (e.g., software versions used for creation), compilation timestamps, GPS coordinates in media, printer identifiers, hidden layers, and document revision history.</p>
+                        <p>This capability provides unparalleled contextual intelligence, acting like an immediate backstory for every digital artifact. It aids in attribution, identifying compromised tools in a supply chain, uncovering exfiltration vectors, and enriching forensic investigations by revealing subtle clues that traditional security tools overlook. This deep insight is crucial for understanding the full scope and intent behind a threat or incident.</p>
                     </div>
+                    <!-- Offering 2: Sophisticated Malware Detection -->
                     <div class="vision-card">
-                        <i class="fas fa-eye card-icon"></i>
-                        <h3>Our Vision</h3>
-                        <p>To be the leading innovator in data intelligence, setting new standards for accuracy, accessibility, and ethical data handling, and fostering a world where data works for everyone.</p>
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <h3>Sophisticated Malware Detection Toolkit</h3>
+                        <p>Our comprehensive toolkit combines multiple advanced techniques to detect, analyze, and understand malware, including the most evasive and polymorphic variants. This includes:</p>
+                        <ul>
+                            <li><strong>Static Analysis:</strong> Decompilation, disassembly, string analysis, and API call mapping to understand potential malicious logic without execution.</li>
+                            <li><strong>Dynamic Analysis:</strong> Executing suspicious files in tightly controlled, isolated environments to observe their real-time behavior (e.g., file system changes, network communication, process injection).</li>
+                            <li><strong>Behavioral Anomaly Detection:</strong> Continuous monitoring of system processes and network flows to establish baselines of normal behavior and flag deviations indicative of malware activity.</li>
+                            <li><strong>Signature-less Detection:</strong> Leveraging heuristic analysis and machine learning models trained on malicious features and attacker Tactics, Techniques, and Procedures (TTPs) to identify zero-day and highly obfuscated threats.</li>
+                        </ul>
+                        <p>Crucially, our isolated analysis environment features a unique capability to control and manipulate the system's internal clock and date. This "Time-Manipulating Sandbox" is specifically designed to defeat time-based malware evasion techniques, such as malware that "sleeps" for a specific duration or until a future date to bypass sandboxes. By fast-forwarding time within the sandbox, we force time-triggered payloads to detonate, enabling full behavioral observation and comprehensive analysis of the threat's entire lifecycle.</p>
+                        <p>This toolkit provides an exceptionally high detection rate for known and unknown malware, significantly reducing the risk of a breach. The time-manipulating sandbox ensures that even the most patient and evasive threats are fully exposed and understood, leading to more complete threat intelligence and more effective remediation strategies.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- AI Integration Section -->
         <section class="our-story-section">
             <div class="container">
-                <h2 class="section-title">Our Story</h2>
+                <h2 class="section-title">AI Integration for Automated Security Operations</h2>
                 <div class="story-content">
                     <div class="story-image">
-                        <img src="images/story-illustration.svg" alt="Illustration of growth, depicting a timeline or progress.">
+                        <!-- Placeholder image, ideally replace with an AI-related illustration -->
+                        <img src="images/story-illustration.svg" alt="Illustration of growth, depicting a timeline or progress with AI concepts.">
                     </div>
                     <div class="story-text">
-                        <h3>From a Vision to a Powerful Platform</h3>
-                        <p>Founded in [Year], Your SaaS Name began with a simple idea: that metadata, often overlooked, holds immense power. Our founders, [Founder Name 1] and [Founder Name 2], envisioned a platform that could easily extract and analyze this hidden information, providing unparalleled clarity.</p>
-                        <p>Starting as a small team in Kitchener, Ontario, we quickly gained traction, refining our algorithms and expanding our capabilities. Today, we serve a diverse global clientele, continuously innovating to meet the evolving demands of data management and security.</p>
-                        <p>We believe in building tools that are not just functional but also ethical and user-friendly, ensuring that complex data challenges become manageable opportunities for growth.</p>
+                        <h3>Leveraging Artificial Intelligence for Enhanced Cybersecurity</h3>
+                        <p>Go Cyber Pros integrates advanced Artificial Intelligence and Machine Learning models – either our pre-defined proprietary models or custom models tailored to client needs – to automate and enhance various aspects of cybersecurity. This means our systems can constantly monitor for threats, extract important information, and even help respond to attacks much faster and more efficiently than humans alone, freeing up security teams for more complex tasks.</p>
+                        <p>How AI helps:</p>
+                        <ul>
+                            <li><strong>Automated Monitoring & Alert Triage:</strong> AI continuously analyzes vast volumes of security logs, network traffic, and endpoint data to identify suspicious patterns, drastically reducing false positives and allowing human analysts to focus on genuine, high-priority threats.</li>
+                            <li><strong>Intelligent Data Extraction & Correlation:</strong> AI assists in refining metadata extraction, identifying critical relationships between seemingly disparate data points, and contextually enriching information for faster investigations.</li>
+                            <li><strong>Proactive Threat Hunting:</strong> Our AI algorithms can autonomously search for subtle indicators of compromise (IoCs) and advanced persistent threats (APTs) that might otherwise go unnoticed.</li>
+                            <li><strong>Automated Incident Response & Remediation:</strong> AI aids in automating initial incident triage, correlating events, suggesting optimal response actions, and even executing predefined containment measures (e.g., host isolation, blocking malicious IPs) to minimize breach impact and accelerate recovery.</li>
+                            <li><strong>Predictive Analytics:</strong> By analyzing historical threat data and current vulnerabilities, our AI can forecast potential future attack vectors and predict which assets are most at risk, enabling organizations to implement proactive defense strategies and allocate resources more effectively.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Our Story & Values Section -->
         <section class="our-values-section">
             <div class="container">
-                <h2 class="section-title">Our Core Values</h2>
+                <h2 class="section-title">Our Story & Values</h2>
                 <div class="values-grid">
+                    <!-- Value Card 1: Our Journey -->
+                    <div class="value-card">
+                        <i class="fas fa-history card-icon"></i>
+                        <h3>Our Journey</h3>
+                        <p>Founded with the core belief that metadata, often overlooked, holds immense power, Go Cyber Pros began its journey in Kitchener, Ontario, Canada. Our founders envisioned a platform that could easily extract and analyze this hidden information, providing unparalleled clarity for businesses facing complex cyber threats. We've grown from a dedicated small team to serve a diverse global clientele, continuously innovating to meet the evolving demands of data security and threat intelligence.</p>
+                    </div>
+                    <!-- Value Card 2: Innovation -->
                     <div class="value-card">
                         <i class="fas fa-lightbulb card-icon"></i>
                         <h3>Innovation</h3>
-                        <p>We constantly push the boundaries of what's possible, investing in research and development to bring you the most advanced solutions.</p>
+                        <p>We relentlessly push the boundaries of what's possible in cybersecurity, investing in cutting-edge research and development to bring you the most advanced and effective solutions. Our super-smart detection system can even trick tricky malware that tries to hide, forcing it to show its true colors in a safe, isolated testing zone.</p>
                     </div>
-                    <div class="value-card">
-                        <i class="fas fa-shield-alt card-icon"></i>
-                        <h3>Integrity</h3>
-                        <p>Trust and transparency are at our core. We uphold the highest ethical standards in data privacy and security.</p>
-                    </div>
+                    <!-- Value Card 3: Client Focus -->
                     <div class="value-card">
                         <i class="fas fa-handshake card-icon"></i>
-                        <h3>Customer Focus</h3>
-                        <p>Your success is our priority. We listen, adapt, and provide exceptional support to help you achieve your goals.</p>
+                        <h3>Client Focus</h3>
+                        <p>Your business's security and success are our paramount priorities. We listen intently to your challenges, adapt our solutions to your specific needs, and provide exceptional support to help you achieve robust cybersecurity postures and operational resilience.</p>
                     </div>
+                    <!-- Value Card 4: Integrity & Collaboration -->
                     <div class="value-card">
                         <i class="fas fa-users card-icon"></i>
-                        <h3>Collaboration</h3>
-                        <p>We believe in the power of teamwork, both internally and with our clients, to build stronger solutions together.</p>
+                        <h3>Integrity & Collaboration</h3>
+                        <p>Trust and transparency are fundamental to our operations. We uphold the highest ethical standards in data privacy and security. We believe in the power of teamwork, fostering strong collaboration both internally and with our clients, to build stronger, more secure solutions together.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Call to Action Section -->
         <section class="cta-section">
             <div class="container">
-                <h2>Ready to Revolutionize Your Data Workflow?</h2>
-                <p>From precision metadata extraction to advanced security analysis, we have the tools to transform your operations.</p>
+                <h2>Ready to Enhance Your Business's Cyber Defenses?</h2>
+                <p>From precision metadata extraction and advanced malware detection to intelligent automation, Go Cyber Pros has the tools to transform your security operations and protect your critical assets.</p>
                 <a href="contact.html" class="btn btn-large">Get Started with a Consultation</a>
             </div>
         </section>
     </main>
 
+    <!-- Main Footer Section -->
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-brand">
+                <!-- Logo for footer -->
                 <a href="index.html" class="logo">
-                    <img src="images/logo-light.png" alt="Your SaaS Name Logo" class="light-logo">
-                    <img src="images/logo-dark.png" alt="Your SaaS Name Logo" class="dark-logo">
+                    <img src="images/logo-light.png" alt="Go Cyber Pros Logo" class="light-logo">
+                    <img src="images/logo-dark.png" alt="Go Cyber Pros Logo" class="dark-logo">
                 </a>
-                <p class="tagline">Intelligent Metadata for Intelligent Decisions</p>
-                <p class="copyright">&copy; <span id="current-year"></span> Your SaaS Name. All rights reserved.</p>
+                <p class="tagline">Intelligent Cybersecurity for Intelligent Businesses</p>
+                <p class="copyright">&copy; <span id="current-year"></span> Go Cyber Pros. All rights reserved.</p>
             </div>
+            <!-- Footer Navigation -->
             <nav class="footer-nav">
                 <h3>Quick Links</h3>
                 <ul>
@@ -195,6 +236,7 @@
                     <li><a href="#">Pricing</a></li>
                 </ul>
             </nav>
+            <!-- Footer Legal Links -->
             <div class="footer-legal">
                 <h3>Legal</h3>
                 <ul>
@@ -203,6 +245,7 @@
                     <li><a href="#">Cookie Policy</a></li>
                 </ul>
             </div>
+            <!-- Footer Social Media Links -->
             <div class="footer-social">
                 <h3>Connect With Us</h3>
                 <div class="social-icons">
@@ -214,6 +257,11 @@
         </div>
     </footer>
 
+    <!-- Link to your JavaScript file -->
     <script src="java.js" defer></script>
-    </body>
+    <script>
+        // JavaScript to dynamically set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
