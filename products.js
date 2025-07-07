@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('file', file);
 
         try {
-            const response = await fetch('/api/extract', {
+            const response = await fetch('https://github.com/Arisealah/GoCyberPros/tree/master/backend/server.py', {
                 method: 'POST',
                 body: formData
             });
