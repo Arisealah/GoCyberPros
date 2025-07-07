@@ -6,10 +6,30 @@ import logging
 import sys
 from werkzeug.utils import secure_filename
 
+# server.py - Add these modifications
+
+# Add this at the top
+# from flask_cors import CORS
+
+# # Initialize CORS after creating the app
+# app = Flask(__name__)
+# CORS(app)  # Allow all origins (for development)
+# # For production, use: CORS(app, resources={r"/api/*": {"origins": "https://your-github-username.github.io"}})
+
+# ... existing code ...
+
+# # Update the main block
+# if __name__ == '__main__':
+#     # Use environment variable for port or default to 5000
+#     port = int(os.environ.get("PORT", 5000))
+#     app.run(host='0.0.0.0', port=port)
+
+
 # Configure basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 app = Flask(__name__) # Ensure only ONE instance of Flask app
+cors(app) 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 # 16 Megabytes
 
 # CRITICAL CHANGE: Explicitly allow all origins for /api/ routes
@@ -87,3 +107,9 @@ if __name__ == '__main__':
     logging.info("Starting Flask application...")
     app.run(debug=True, host='0.0.0.0', port=5000)
     logging.info("Flask application stopped.")
+
+# Update the main block
+
+    # Use environment variable for port or default to 5000
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
