@@ -1,39 +1,23 @@
+
+
 from flask import Flask, request, jsonify, send_from_directory
 import os
 import tempfile
-from flask_cors import CORS
+from flask_cors import CORS # Keep this import
 import logging
 import sys
 from werkzeug.utils import secure_filename
-
-# server.py - Add these modifications
-
-# Add this at the top
-# from flask_cors import CORS
-
-# # Initialize CORS after creating the app
-# app = Flask(__name__)
-# CORS(app)  # Allow all origins (for development)
-# # For production, use: CORS(app, resources={r"/api/*": {"origins": "https://your-github-username.github.io"}})
-
-# ... existing code ...
-
-# # Update the main block
-# if __name__ == '__main__':
-#     # Use environment variable for port or default to 5000
-#     port = int(os.environ.get("PORT", 5000))
-#     app.run(host='0.0.0.0', port=port)
-
 
 # Configure basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 app = Flask(__name__) # Ensure only ONE instance of Flask app
-cors(app) 
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 # 16 Megabytes
 
 # CRITICAL CHANGE: Explicitly allow all origins for /api/ routes
-CORS(app, resources={r"/api/*": {"origins": "*"}}) 
+# This is the correct way to initialize CORS. The 'cors(app)' line below it is redundant and incorrect.
+CORS(app, resources={r"/api/*": {"origins": "*"}}) # This line is correct and necessary.
+
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 # 16 Megabytes
 
 # Add the project root to sys.path so 'from backend.dispatch import get_extractor' works when running backend/server.py directly.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -105,11 +89,7 @@ def log_request_info():
 
 if __name__ == '__main__':
     logging.info("Starting Flask application...")
-    app.run(debug=True, host='0.0.0.0', port=5000)
-    logging.info("Flask application stopped.")
-
-# Update the main block
-
-    # Use environment variable for port or default to 5000
+    # Use environment variable for port or default to 5000, as recommended for Render
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+    logging.info("Flask application stopped.")
