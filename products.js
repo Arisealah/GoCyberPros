@@ -1,4 +1,10 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    // --- IMPORTANT: REPLACE THIS WITH YOUR ACTUAL RENDER BACKEND URL ---
+    const BACKEND_URL = 'https://your-render-app-name.onrender.com'; // Example: 'https://gocyberpros-backend.onrender.com'
+    // ------------------------------------------------------------------
+
     // --- Modal Elements ---
     const productDemoModal = document.getElementById('product-demo-modal');
     const closeDemoModalButton = document.getElementById('close-demo-modal');
@@ -151,28 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData();
             formData.append('file', file);
 
-            // products.js - Updated fetch calls
-
-// Set your backend URL here (replace with your actual deployment URL)
-const API_BASE_URL = 'https://your-flask-backend.onrender.com';
-
-// Demo modal section
-const response = await fetch(`${API_BASE_URL}/api/extract`, {
-  method: 'POST',
-  body: formData
-});
-
-// Unified extractor section
-const response = await fetch(`${API_BASE_URL}/api/extract`, {
-  method: 'POST',
-  body: formData
-// });
-//             try {
-//                 const response = await fetch('https://github.com/Arisealah/GoCyberPros/tree/master/backend/server.py', {
-//                     method: 'POST',
-//                     body: formData
-//                 });
-                
+            try {
+                // Modified fetch call
+                const response = await fetch(`${BACKEND_URL}/api/extract`, {
+                    method: 'POST',
+                    body: formData
+                });
 
                 if (!response.ok) {
                     let errorMsg = `HTTP error! status: ${response.status}`;
@@ -224,7 +214,8 @@ const response = await fetch(`${API_BASE_URL}/api/extract`, {
         formData.append('file', file);
 
         try {
-            const response = await fetch('https://github.com/Arisealah/GoCyberPros/tree/master/backend/server.py', {
+            // Modified fetch call
+            const response = await fetch(`${BACKEND_URL}/api/extract`, {
                 method: 'POST',
                 body: formData
             });
