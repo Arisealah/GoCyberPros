@@ -11,3 +11,4 @@ mutagen # for 'mutagen.mp3', 'mutagen.easyid3', 'mutagen.id3', 'mutagen.mp4'
 PyPDF2 # for 'PyPDF2'
 openpyxl # for 'openpyxl'
 nltk
+python-pptx
