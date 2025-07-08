@@ -2,7 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- IMPORTANT: REPLACE THIS WITH YOUR ACTUAL RENDER BACKEND URL ---
-    const BACKEND_URL = 'https://your-render-app-name.onrender.com'; // Example: 'https://gocyberpros-backend.onrender.com'
+    // In products.js
+const BACKEND_URL = 'https://gocyberpros-backend-v1.onrender.com'; // <--- Update this line // Example: 'https://gocyberpros-backend.onrender.com'
     // ------------------------------------------------------------------
 
     // --- Modal Elements ---
