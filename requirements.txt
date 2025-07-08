@@ -1,0 +1,12 @@
+
+
+Flask
+Flask-Cors
+gunicorn
+python-magic # for 'magic'
+chardet # for 'chardet'
+python-docx # for 'docx'
+Pillow # for 'PIL.Image', 'PIL.ExifTags', 'PIL.PngImagePlugin'
+mutagen # for 'mutagen.mp3', 'mutagen.easyid3', 'mutagen.id3', 'mutagen.mp4'
+PyPDF2 # for 'PyPDF2'
+openpyxl # for 'openpyxl'
